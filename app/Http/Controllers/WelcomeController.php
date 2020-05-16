@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class WelcomeController extends Controller
 {
     public function index() {
-        $images = Gif::all();
+        $images = Gif::orderBy('id', 'DESC')->get();
         return view('welcome')->with('images', $images);
     }
 
