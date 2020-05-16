@@ -10933,9 +10933,42 @@ a.text-dark:focus {
   }
 }
 
+.content {
+  width: 100vw;
+}
+
 .form-footer {
   display: flex;
   margin-top: 1rem;
   justify-content: flex-end;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.images li {
+  margin: 1rem;
+}
+
+.images button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.images span {
+  text-align: center;
+  width: 100%;
+}
+
+.images img {
+  max-height: 100px;
 }
 
