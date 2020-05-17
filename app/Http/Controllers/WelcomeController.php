@@ -13,6 +13,11 @@ class WelcomeController extends Controller
         return view('welcome')->with('images', $images);
     }
 
+    public function getAll() {
+      $images = Gif::select('code', 'url')->get();
+      return $images;
+    }
+
     public function get($code) {
         $image = Gif::where('code', $code)->first();
         return $image;

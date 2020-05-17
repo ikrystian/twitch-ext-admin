@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/get', 'WelcomeController@getAll');
 Route::get('/get/{code}', 'WelcomeController@get');
 Auth::routes();
 
