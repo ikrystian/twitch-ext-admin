@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Gif;
+use App\Viewer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,5 +22,10 @@ class WelcomeController extends Controller
     public function get($code) {
         $image = Gif::where('code', $code)->first();
         return $image;
+    }
+
+    public function getUsers() {
+      $viewers = Viewer::all();
+      return $viewers;
     }
 }
