@@ -24,4 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@store');
 
 // restaurants
+Route::get('/getAllRestaurant');
 Route::get('/getRestaurantInfo/{restaurantId}', 'WelcomeController@getRestaurantInfo');

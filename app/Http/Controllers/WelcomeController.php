@@ -29,6 +29,10 @@ class WelcomeController extends Controller
       $viewers = Viewer::all();
       return $viewers;
     }
+
+    public function getAllRestaurant() {
+      return RestaurantL::all();
+    }
  
     public function getRestaurantInfo($restaurantId) {
       $restaurant = Restaurant::where('takeaway_id', $restaurantId)->first();
