@@ -6,6 +6,7 @@ use App\Gif;
 use App\Viewer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Restaurant;
 
 class WelcomeController extends Controller
 {
@@ -30,6 +31,7 @@ class WelcomeController extends Controller
     }
 
     public function getRestaurantInfo($restaurantId) {
-      return $restaurantId;
+      $restaurant = Restaurant::where('takeaway_id', $restaurantId)->first();
+      return $restaurant;
     }
 }
