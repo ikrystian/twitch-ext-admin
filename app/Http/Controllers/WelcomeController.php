@@ -31,7 +31,7 @@ class WelcomeController extends Controller
     }
 
     public function getAllRestaurant() {
-      return RestaurantL::all();
+      return Restaurant::all();
     }
  
     public function getRestaurantInfo($restaurantId) {
