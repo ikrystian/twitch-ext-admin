@@ -22,3 +22,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@store');
+
+// restaurants
+Route::get('/getRestaurantInfo/{restaurantId}', 'WelcomeController@getRestaurantInfo');

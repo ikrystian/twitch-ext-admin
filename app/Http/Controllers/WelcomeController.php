@@ -28,4 +28,8 @@ class WelcomeController extends Controller
       $viewers = Viewer::all();
       return $viewers;
     }
+
+    public function getRestaurantInfo($restaurantId) {
+      return $restaurantId;
+    }
 }
